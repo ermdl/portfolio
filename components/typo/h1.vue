@@ -1,5 +1,20 @@
 <template>
-    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        <slot></slot>
-    </h1>
+  <h1
+    :class="
+      cn(
+        'scroll-m-20 text-5xl font-semibold tracking-tight lg:text-8xl',
+        props.class
+      )
+    "
+  >
+    <slot />
+  </h1>
 </template>
+
+<script setup lang="ts">
+import { cn } from '@/lib/utils'
+
+const props = defineProps<{
+  class?: string
+}>()
+</script>
