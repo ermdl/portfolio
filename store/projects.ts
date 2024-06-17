@@ -36,6 +36,7 @@ export const useProjectsStore = defineStore('projects', () => {
     return list.value.filter(item => item.tags.some(t => tag.includes(t)))
   }
 
+  // TODO: To implement someday
   // const filterByFeatured = (projects: Project[]) => {
   //   return projects.filter(project => project.isFeatured)
   // }
