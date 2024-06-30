@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col gap-6 p-6 border rounded-3xl">
+  <div class="flex flex-col gap-4">
     <!-- <Icon :name="useIcon(service.icon)" class="w-7 h-7 text-blue-500" /> -->
     <div
-      class="border border-slate-900/5 dark:border-slate-100/5 rounded-xl overflow-hidden h-auto bg-slate-50 dark:bg-slate-950"
+      class="border border-slate-900/5 dark:border-slate-100/5 rounded-xl overflow-hidden h-auto bg-white dark:bg-black"
     >
       <AspectRatio :ratio="4 / 3">
         <img
@@ -35,7 +35,7 @@
     </div>
     <div>
       <TypoH3>{{ service.title }}</TypoH3>
-      <div class="mt-2 text-slate-500">{{ service.description }}</div>
+      <div class="mt-2 text-slate-600">{{ service.description }}</div>
     </div>
   </div>
 </template>

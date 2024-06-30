@@ -18,7 +18,7 @@
           <!-- <Button variant="default" class="flex">
           <Icon :name="useIcon('wand-sparkles')" class="w-5 h-5" />
           Let's work together!</Button> -->
-          <NuxtLink to="/portfolio">
+          <NuxtLink to="/projects">
             <Button variant="outline" class="flex"> Check out projects</Button>
           </NuxtLink>
         </div>

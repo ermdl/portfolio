@@ -2,7 +2,7 @@ declare interface Project {
   title: string
   slug: string
   description: string
-  category: 'Product design' | 'Development'
+  category: number
   tags: string[]
   isFeatured: boolean
   link?: string

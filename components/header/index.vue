@@ -41,7 +41,7 @@
         <!-- Right -->
         <div class="flex gap-6 items-center">
           <NuxtLink to="/about">About</NuxtLink>
-          <NuxtLink to="/portfolio">Portfolio</NuxtLink>
+          <NuxtLink to="/projects">Projects</NuxtLink>
           <NuxtLink to="/contact">Contact</NuxtLink>
 
           <div

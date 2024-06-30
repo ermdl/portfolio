@@ -2,15 +2,16 @@
   <section id="projects" class="mt-20 mx-4 md:mx-8 xl:mx-auto">
     <Container>
       <TypoH1 class="mb-10">Immersive projects</TypoH1>
-      <Tabs default-value="all">
+      <Tabs :default-value="fetchTab() as string">
         <TabsList>
-          <TabsTrigger value="all"> All </TabsTrigger>
+          <TabsTrigger value="all" @click="clearQuery"> All </TabsTrigger>
           <TabsTrigger
             v-for="category in categories"
-            :key="category"
-            :value="category"
+            :key="category.slug"
+            :value="category.slug"
+            @click="changeQuery(category.slug)"
           >
-            {{ category }}
+            {{ category.name }}
           </TabsTrigger>
         </TabsList>
         <TabsContent value="all" class="w-full">
@@ -18,26 +19,36 @@
         </TabsContent>
         <TabsContent
           v-for="category in categories"
-          :key="category"
-          :value="category"
+          :key="category.slug"
+          :value="category.slug"
           class="w-full"
         >
-          <ProjectList class="mt-20" :projects="filterByCategory(category)" />
+          <ProjectList
+            class="mt-20"
+            :projects="filterProjectsByCategory(category.id)"
+          />
         </TabsContent>
       </Tabs>
-      <!-- <ProjectList class="mt-20" :projects="projects" /> -->
     </Container>
   </section>
 </template>
 
 <script lang="ts" setup>
 import { useProjectsStore } from '~/store/projects'
+import { useCategoriesStore } from '~/store/categories'
 
 useHead({
-  title: 'Danila Ermolenko — Portfolio',
+  title: 'Danila Ermolenko — Projects',
 })
 
+const route = useRoute()
+const router = useRouter()
+
 const projectsStore = useProjectsStore()
+const categoriesStore = useCategoriesStore()
+
+const categories = categoriesStore.list as Category[]
+
 const projects = projectsStore.list as Project[]
 
 const tags = computed(() => {
@@ -48,19 +59,26 @@ const tags = computed(() => {
   return Array.from(tags)
 })
 
-const categories = computed(() => {
-  const categories = new Set<string>()
-  projects.forEach(project => {
-    categories.add(project.category)
-  })
-  return Array.from(categories)
-})
-
 const filterByTag = (tag: string) => {
   return projects.filter(project => project.tags.includes(tag))
 }
 
-const filterByCategory = (category: string) => {
+const filterProjectsByCategory = (category: number) => {
   return projects.filter(project => project.category === category)
+}
+
+const fetchTab = () => {
+  const tab = route.query.category
+  if (tab) {
+    return tab
+  }
+  return 'all'
+}
+
+const changeQuery = (category: string) => {
+  router.push({ query: { category } })
+}
+const clearQuery = () => {
+  router.push({ path: route.path })
 }
 </script>
