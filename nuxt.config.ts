@@ -7,7 +7,11 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@pinia/nuxt',
     'shadcn-nuxt',
+    '@nuxtjs/color-mode',
   ],
+  colorMode: {
+    classSuffix: '',
+  },
   css: ['~/assets/css/tailwind.css'],
   postcss: {
     plugins: {

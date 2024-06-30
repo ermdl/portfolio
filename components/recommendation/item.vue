@@ -25,7 +25,9 @@
         </p>
       </div>
     </div>
-    <div class="text-sm mt-4 leading-6">{{ recommendation.review }}</div>
+    <div class="text-sm mt-4 leading-6 whitespace-pre-line">
+      {{ recommendation.review }}
+    </div>
   </div>
 </template>
 

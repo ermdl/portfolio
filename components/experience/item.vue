@@ -18,7 +18,7 @@
       </div>
       <div class="flex flex-col gap-1">
         <span class="text-xl">
-          {{ experience.position }} at
+          {{ experience.position }} @
           <span class="font-semibold">{{ experience.company }}</span>
         </span>
         <div class="flex gap-2 text-muted-foreground">

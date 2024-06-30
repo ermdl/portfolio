@@ -2,7 +2,7 @@
   <h1
     :class="
       cn(
-        'scroll-m-20 text-5xl font-semibold tracking-tight lg:text-8xl',
+        'scroll-m-20 text-5xl lg:text-[64px] leading-none font-semibold tracking-tight',
         props.class
       )
     "

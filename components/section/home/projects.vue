@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="mt-0 py-20 bg-slate-200">
+  <section id="projects">
     <Container>
       <TypoH2 class="mb-16">My projects</TypoH2>
       <ProjectList :projects="filterFeaturedProjects(projects)" />
