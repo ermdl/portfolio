@@ -14,11 +14,22 @@ declare interface Project {
     {
       src: string
       positions: {
-        left: string
-        top: string
+        common: {
+          left: string
+          top: string
+        }
+        template: {
+          left: string
+          top: string
+        }
       }
       sizes: {
-        width: number
+        common: {
+          width: number
+        }
+        template: {
+          width: number
+        }
       }
     }
   ]

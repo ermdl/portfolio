@@ -35,7 +35,7 @@
     </div>
     <div>
       <TypoH3>{{ service.title }}</TypoH3>
-      <div class="mt-2 text-slate-600">{{ service.description }}</div>
+      <div class="mt-2 text-sm text-slate-600">{{ service.description }}</div>
     </div>
   </div>
 </template>

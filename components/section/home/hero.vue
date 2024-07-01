@@ -24,7 +24,8 @@
         </div>
       </div>
       <div class="flex col-span-3 items-end">
-        <ProjectList :projects="filterFeaturedProjects(projects, 1)" />
+        <!-- <ProjectList :projects="filterFeaturedProjects(projects, 1)" /> -->
+        <ProjectSlider :projects="filterFeaturedProjects(projects)" />
       </div>
     </Container>
   </section>
@@ -37,6 +38,10 @@ const store = useProjectsStore()
 const projects = store.list as Project[]
 
 const filterFeaturedProjects = (projects: Project[], limit: number) => {
-  return projects.filter(project => project.isFeatured).slice(0, limit)
+  if (limit === 0) {
+    return projects.filter(project => project.isFeatured)
+  } else {
+    return projects.filter(project => project.isFeatured).slice(0, limit)
+  }
 }
 </script>
