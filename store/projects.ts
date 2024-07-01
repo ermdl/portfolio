@@ -17,23 +17,45 @@ export const useProjectsStore = defineStore('projects', () => {
       },
       thumbnails: [
         {
-          src: 'images/projects/videoly/thumbnails/left.png',
+          src: '/images/projects/videoly/thumbnails/left.png',
           positions: {
-            top: '41.32%',
-            left: '7.34%',
+            common: {
+              top: '41.32%',
+              left: '7.34%',
+            },
+            template: {
+              top: '41.32%',
+              left: '7.34%',
+            },
           },
           sizes: {
-            width: '83.05%',
+            common: {
+              width: '83.05%',
+            },
+            template: {
+              width: '55.36%',
+            },
           },
         },
         {
-          src: 'images/projects/videoly/thumbnails/right.png',
+          src: '/images/projects/videoly/thumbnails/right.png',
           positions: {
-            top: '10.58%',
-            left: '38.57%',
+            common: {
+              top: '10.58%',
+              left: '38.57%',
+            },
+            template: {
+              top: '10.58%',
+              left: '40%',
+            },
           },
           sizes: {
-            width: '72%',
+            common: {
+              width: '72%',
+            },
+            template: {
+              width: '50%',
+            },
           },
         },
       ],
@@ -52,13 +74,24 @@ export const useProjectsStore = defineStore('projects', () => {
       },
       thumbnails: [
         {
-          src: 'images/projects/locards/thumbnails/main.png',
+          src: '/images/projects/locards/thumbnails/main.png',
           positions: {
-            top: '35.37%',
-            left: '4.1%',
+            common: {
+              top: '35.37%',
+              left: '4.1%',
+            },
+            template: {
+              top: '0%',
+              left: '0%',
+            },
           },
           sizes: {
-            width: '130.72%',
+            common: {
+              width: '130.72%',
+            },
+            template: {
+              width: '100%',
+            },
           },
         },
       ],
@@ -77,13 +110,24 @@ export const useProjectsStore = defineStore('projects', () => {
       },
       thumbnails: [
         {
-          src: 'images/projects/videoly-dev/thumbnails/main.png',
+          src: '/images/projects/videoly-dev/thumbnails/main.png',
           positions: {
-            top: '27.44%',
-            left: '6.83%',
+            common: {
+              top: '27.44%',
+              left: '6.83%',
+            },
+            template: {
+              top: '0%',
+              left: '0%',
+            },
           },
           sizes: {
-            width: '110.24%',
+            common: {
+              width: '110.24%',
+            },
+            template: {
+              width: '100%',
+            },
           },
         },
       ],
@@ -102,13 +146,24 @@ export const useProjectsStore = defineStore('projects', () => {
       },
       thumbnails: [
         {
-          src: 'images/projects/circle-economy/thumbnails/main.png',
+          src: '/images/projects/circle-economy/thumbnails/main.png',
           positions: {
-            top: '27.44%',
-            left: '6.83%',
+            common: {
+              top: '27.44%',
+              left: '6.83%',
+            },
+            template: {
+              top: '0%',
+              left: '0%',
+            },
           },
           sizes: {
-            width: '110.24%',
+            common: {
+              width: '110.24%',
+            },
+            template: {
+              width: '100%',
+            },
           },
         },
       ],
@@ -127,13 +182,24 @@ export const useProjectsStore = defineStore('projects', () => {
       },
       thumbnails: [
         {
-          src: 'images/projects/manuvo/thumbnails/main.png',
+          src: '/images/projects/manuvo/thumbnails/main.png',
           positions: {
-            top: '27.44%',
-            left: '6.83%',
+            common: {
+              top: '27.44%',
+              left: '6.83%',
+            },
+            template: {
+              top: '0%',
+              left: '0%',
+            },
           },
           sizes: {
-            width: '110.24%',
+            common: {
+              width: '110.24%',
+            },
+            template: {
+              width: '100%',
+            },
           },
         },
       ],
@@ -152,13 +218,24 @@ export const useProjectsStore = defineStore('projects', () => {
       },
       thumbnails: [
         {
-          src: 'images/projects/know-you-more/thumbnails/main.png',
+          src: '/images/projects/know-you-more/thumbnails/main.png',
           positions: {
-            top: '27.44%',
-            left: '6.83%',
+            common: {
+              top: '27.44%',
+              left: '6.83%',
+            },
+            template: {
+              top: '0%',
+              left: '0%',
+            },
           },
           sizes: {
-            width: '110.24%',
+            common: {
+              width: '110.24%',
+            },
+            template: {
+              width: '100%',
+            },
           },
         },
       ],
@@ -177,23 +254,45 @@ export const useProjectsStore = defineStore('projects', () => {
       },
       thumbnails: [
         {
-          src: 'images/projects/yammy/thumbnails/left.png',
+          src: '/images/projects/yammy/thumbnails/left.png',
           positions: {
-            top: '43.47%',
-            left: '15.53%',
+            common: {
+              top: '43.47%',
+              left: '15.53%',
+            },
+            template: {
+              top: '0%',
+              left: '0%',
+            },
           },
           sizes: {
-            width: '47.78%',
+            common: {
+              width: '47.78%',
+            },
+            template: {
+              width: '100%',
+            },
           },
         },
         {
-          src: 'images/projects/yammy/thumbnails/right.png',
+          src: '/images/projects/yammy/thumbnails/right.png',
           positions: {
-            top: '21.16%',
-            left: '40.96%',
+            common: {
+              top: '21.16%',
+              left: '40.96%',
+            },
+            template: {
+              top: '0%',
+              left: '0%',
+            },
           },
           sizes: {
-            width: '49.15%',
+            common: {
+              width: '49.15%',
+            },
+            template: {
+              width: '100%',
+            },
           },
         },
       ],
@@ -212,13 +311,24 @@ export const useProjectsStore = defineStore('projects', () => {
       },
       thumbnails: [
         {
-          src: 'images/projects/mankai/thumbnails/main.png',
+          src: '/images/projects/mankai/thumbnails/main.png',
           positions: {
-            top: '27.44%',
-            left: '6.83%',
+            common: {
+              top: '27.44%',
+              left: '6.83%',
+            },
+            template: {
+              top: '0%',
+              left: '0%',
+            },
           },
           sizes: {
-            width: '110.24%',
+            common: {
+              width: '110.24%',
+            },
+            template: {
+              width: '100%',
+            },
           },
         },
       ],

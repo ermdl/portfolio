@@ -36,6 +36,7 @@
 <script lang="ts" setup>
 import { useProjectsStore } from '~/store/projects'
 import { useCategoriesStore } from '~/store/categories'
+import { onMounted } from 'vue'
 
 useHead({
   title: 'Danila Ermolenko — Projects',

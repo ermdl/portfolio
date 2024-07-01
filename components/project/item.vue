@@ -9,7 +9,9 @@
       <div class="flex flex-col gap-6 relative w-full h-full">
         <div class="flex flex-col gap-2 grow justify-between p-10 w-[75%]">
           <div>
-            <div class="font-semibold text-4xl tracking-tight text-white">
+            <div
+              class="project-title font-semibold text-4xl tracking-tight text-white"
+            >
               {{ project.title }}
             </div>
             <div class="mt-2 text-sm text-white/80">
@@ -47,8 +49,8 @@
             :src="thumbnail.src"
             :alt="project.title"
             :style="{
-              ...thumbnail.positions,
-              ...thumbnail.sizes,
+              ...thumbnail.positions.common,
+              ...thumbnail.sizes.common,
             }"
             class="absolute object-cover origin-center max-w-none transform-gpu group-hover/project:translate-y-[12%] group-hover/project:scale-110 transition-transform duration-300"
           />

@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'shadcn-nuxt',
     '@nuxtjs/color-mode',
+    'nuxt-swiper',
   ],
   colorMode: {
     classSuffix: '',
