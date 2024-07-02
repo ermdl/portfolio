@@ -42,4 +42,10 @@ thumbnails:
         width: 50%
 ---
 
-Project content
+::projectHalfImage{direction='left'}
+#text
+Hello world from the component
+
+#image
+
+::
