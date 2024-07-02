@@ -52,4 +52,5 @@ direction: right
 Some interesting content should be here for the tests
 
 #image
+![Preview](/images/projects/videoly/content/test.png)
 ::
