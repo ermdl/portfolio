@@ -2,22 +2,38 @@
 priority: 2
 title: Videoly
 slug: videoly-dev
-description:
-
-category:
-isFeatured:
-link:
+description: null
+category: null
+isFeatured: null
+link: null
 colors:
   background: '#'
   corner: '#'
-
 tags: []
-thumbnails: [{ src: '', positions: {}, sizes: {} }]
+thumbnails:
+  - src: ''
+    positions: {}
+    sizes: {}
 ---
 
-::hero{name=""}
+::hero
+---
+name: Some name here
+---
 Test
 
 #test
-Hello from test slot
+This is a test from Nuxt Studio
+
+#content
+## Hello world
+
+  :::prose-code-inline
+  const test = 'Hello from test'
+  :::
+
+  :::hero
+  #test
+  sadasdasdasd
+  :::
 ::
