@@ -1,5 +1,5 @@
 ---
-priority: 2
+id: 2
 title: Locards
 slug: locards
 description: Design system for Locards

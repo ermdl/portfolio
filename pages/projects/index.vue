@@ -23,9 +23,15 @@
           :value="category.slug"
           class="w-full"
         >
+          <!-- <pre>{{ projects }}</pre> -->
+          <!-- <ul>
+            <li v-for="category in categories">
+              {{ filterProjectsByCategory(projects, category.id) }}
+            </li>
+          </ul> -->
           <ProjectList
             class="mt-20"
-            :projects="filterProjectsByCategory(category.id)"
+            :projects="filterProjectsByCategory(projects, category.id)"
           />
         </TabsContent>
       </Tabs>
@@ -50,7 +56,11 @@ const categoriesStore = useCategoriesStore()
 
 const categories = categoriesStore.list as Category[]
 
-const projects = projectsStore.list as Project[]
+const { data: projects } = await useAsyncData('project', () =>
+  queryContent('project').sort({ id: 1 }).find()
+)
+
+// const projects = projectsStore.list as Project[]
 
 const tags = computed(() => {
   const tags = new Set<string>()
@@ -64,8 +74,12 @@ const filterByTag = (tag: string) => {
   return projects.filter(project => project.tags.includes(tag))
 }
 
-const filterProjectsByCategory = (category: number) => {
+const filterProjectsByCategory = (projects: any, category: number) => {
   return projects.filter(project => project.category === category)
+}
+
+const mapProjects = (category?: number) => {
+  return projects
 }
 
 const fetchTab = () => {

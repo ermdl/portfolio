@@ -1,21 +1,21 @@
 ---
-id: 4
-title: Circle Economy
-slug: circle-economy
-description: Design system for Locards
+id: 5
+title: Manuvo
+slug: manuvo
+description: Custom JavaScript functionality
 
 category: 1
 isFeatured: true
-link: null
+link: https://manuvo.com/
 colors:
-  background: '#00D8C7'
-  corner: '#263238'
+  background: '#8096DB'
+  corner: '#FF909C'
 
-tags: ['Product design', 'UX/UI', 'Figma', 'Motion']
+tags: ['Webflow', 'JavaScript']
 thumbnails:
   [
     {
-      src: '/images/projects/circle-economy/thumbnails/main.png',
+      src: '/images/projects/manuvo/thumbnails/main.png',
       positions:
         {
           common: { top: '35%', left: '8.5%' },

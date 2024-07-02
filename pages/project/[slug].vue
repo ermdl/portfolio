@@ -49,17 +49,8 @@
       </AspectRatio>
     </div>
 
-    <pre>{{ data }}</pre>
-
     <ContentDoc />
   </Container>
-  <!-- <div>
-    <section>
-      <Container>
-        <TypoH1>{{ project.title }}</TypoH1>
-      </Container>
-    </section>
-  </div> -->
 </template>
 
 <script lang="ts" setup>
@@ -71,21 +62,6 @@ const { data } = await useAsyncData('project', () =>
     .where({ slug: { $eq: slug } })
     .findOne()
 )
-
-// const projectsStore = useProjectsStore()
-// const project = projectsStore.list.find(
-//   project => project.slug === route.params.slug
-// ) as Project
-
-// const projectSlug = computed(() => route.params.slug)
-
-const setProjectBackgroundColor = computed(() => {
-  return `background-color: ${data.colors?.background || 'white'}`
-})
-
-const setProjectCornerColor = computed(() => {
-  return `background-color: ${data.colors?.corner || 'black'}`
-})
 
 const setBgColor = (color: string) => {
   return `background-color: ${color}`

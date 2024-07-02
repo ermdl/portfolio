@@ -1,5 +1,5 @@
 ---
-priority: 1
+id: 1
 title: Videoly
 slug: videoly-design
 description: Design system for Nordic market-leading video technology for online retailers offering relevant hand-picked product videos at scale

@@ -1,10 +1,10 @@
 ---
-priority: 2
+id: 3
 title: Videoly
 slug: videoly-dev
 description: null
-category: null
-isFeatured: null
+category: 1
+isFeatured: false
 link: null
 colors:
   background: '#'

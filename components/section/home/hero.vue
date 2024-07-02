@@ -25,7 +25,7 @@
       </div>
       <div class="flex col-span-3 items-end">
         <!-- <ProjectList :projects="filterFeaturedProjects(projects, 1)" /> -->
-        <ProjectSlider :projects="filterFeaturedProjects(data)" />
+        <ProjectSlider :projects="data" />
       </div>
     </Container>
   </section>
@@ -33,14 +33,14 @@
 
 <script lang="ts" setup>
 const { data } = await useAsyncData('project', () =>
-  queryContent('project').sort({ priority: 1 }).find()
+  queryContent('project').where({ isFeatured: true }).sort({ id: 1 }).find()
 )
 
-const filterFeaturedProjects = (projects: Project[], limit?: number) => {
-  if (limit === 0) {
-    return projects.filter(project => project.isFeatured)
-  } else {
-    return projects.filter(project => project.isFeatured).slice(0, limit)
-  }
-}
+// const filterFeaturedProjects = (projects: Project[], limit?: number) => {
+//   if (limit === 0) {
+//     return projects.filter(project => project.isFeatured)
+//   } else {
+//     return projects.filter(project => project.isFeatured).slice(0, limit)
+//   }
+// }
 </script>
