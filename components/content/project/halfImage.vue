@@ -1,21 +1,7 @@
 <template>
   <section class="grid grid-cols-2">
-    <div v-if="direction === 'left'">
-      <div class="col-span-1">
-        <ContentSlot :use="$slots.text"></ContentSlot>
-      </div>
-      <div class="col-span-1">
-        <ContentSlot :use="$slots.image"></ContentSlot>
-      </div>
-    </div>
-    <div v-else>
-      <div class="col-span-1">
-        <ContentSlot :use="$slots.image"></ContentSlot>
-      </div>
-      <div class="col-span-1">
-        <ContentSlot :use="$slots.text"></ContentSlot>
-      </div>
-    </div>
+    <ContentSlot :use="$slots.text" class="col-span-1"></ContentSlot>
+    <ContentSlot :use="$slots.image" class="col-span-1"></ContentSlot>
   </section>
 </template>
 
