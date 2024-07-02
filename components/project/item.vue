@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="projectLink"
+    :to="project._path"
     class="flex flex-col gap-6 w-full rounded-3xl group/project transform-gpu overflow-hidden group-hover/project:shadow-2xl transition-shadow duration-200 delay-75"
     :style="setProjectBackgroundColor"
   >
@@ -79,9 +79,9 @@ const isThumbnailLoaded = ref(false)
 //   }
 // })
 
-const projectLink = computed(() => {
-  return `/project/${props.project.slug}`
-})
+// const projectLink = computed(() => {
+//   return `/project/${props.project.slug}`
+// })
 
 const setProjectBackgroundColor = computed(() => {
   return `background-color: ${props.project.colors?.background || 'white'}`

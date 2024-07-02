@@ -1,6 +1,11 @@
 <template>
-  <Container>
-    <!-- <div
+  <div>
+    <TypoH1>{{ name }}</TypoH1>
+    <slot name="test"></slot>
+    <ContentSlot :use="$slots.content" />
+  </div>
+
+  <!-- <div
       class="flex flex-col gap-6 w-full rounded-3xl group/project transform-gpu overflow-hidden duration-200 delay-75"
       :style="setProjectBackgroundColor"
     >
@@ -48,42 +53,12 @@
         </div>
       </AspectRatio>
     </div> -->
-
-    <ContentDoc />
-  </Container>
-  <!-- <div>
-    <section>
-      <Container>
-        <TypoH1>{{ project.title }}</TypoH1>
-      </Container>
-    </section>
-  </div> -->
 </template>
 
 <script lang="ts" setup>
-const route = useRoute()
-
-// const projectsStore = useProjectsStore()
-// const project = projectsStore.list.find(
-//   project => project.slug === route.params.slug
-// ) as Project
-
-// const projectSlug = computed(() => route.params.slug)
-
-// const setProjectBackgroundColor = computed(() => {
-//   return `background-color: ${project.colors?.background || 'white'}`
-// })
-
-// const setProjectCornerColor = computed(() => {
-//   return `background-color: ${project.colors?.corner || 'black'}`
-// })
+defineProps<{
+  name: string
+}>()
 </script>
 
-<style>
-main :deep(h1) {
-  @apply text-6xl font-semibold;
-}
-h1 {
-  @apply text-6xl font-semibold;
-}
-</style>
+<style></style>

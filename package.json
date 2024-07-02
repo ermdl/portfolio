@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/content": "^2.13.0",
     "@nuxt/eslint": "^0.3.13",
+    "@nuxt/image": "^1.7.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@pinia/nuxt": "^0.5.1",
     "@typescript-eslint/eslint-plugin": "^7.13.0",

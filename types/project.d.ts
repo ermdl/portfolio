@@ -1,4 +1,5 @@
 declare interface Project {
+  _path: string
   title: string
   slug: string
   description: string
