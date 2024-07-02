@@ -92,6 +92,4 @@ const setProjectCornerColor = computed(() => {
 })
 </script>
 
-<style scoped lang="scss">
-// Nothing here
-</style>
+<style scoped></style>
