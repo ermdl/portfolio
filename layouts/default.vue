@@ -11,7 +11,7 @@
   <div class="h-[400vh]"></div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .container-dashed-lines {
   position: relative;
   height: 100%;
