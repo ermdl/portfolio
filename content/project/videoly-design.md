@@ -35,13 +35,4 @@ thumbnails:
   ]
 ---
 
-::hero{name="Videolt — Product design project"}
-Test
-
-#test
-Hello from test slot
-::
-
-how are you?
-
-![left image](/images/projects/videoly/thumbnails/left.png)
+Project content

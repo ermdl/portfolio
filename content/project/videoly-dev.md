@@ -16,24 +16,4 @@ thumbnails:
     sizes: {}
 ---
 
-::hero
----
-name: Some name here
----
-Test
-
-#test
-This is a test from Nuxt Studio
-
-#content
-## Hello world
-
-  :::prose-code-inline
-  const test = 'Hello from test'
-  :::
-
-  :::hero
-  #test
-  sadasdasdasd
-  :::
-::
+Project content

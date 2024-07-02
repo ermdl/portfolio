@@ -19,20 +19,11 @@ thumbnails:
       positions:
         {
           common: { top: '35.37%', left: '4.1%' },
-          template: { top: '0%', left: '0%' },
+          template: { top: '40%', left: '15%' },
         },
-      sizes: { common: { width: '130.72%' }, template: { width: '100%' } },
+      sizes: { common: { width: '130.72%' }, template: { width: '80%' } },
     },
   ]
 ---
 
-::hero{name="Locards project"}
-Test
-
-#test
-Hello from test slot
-::
-
-how are you?
-
-![left image](/images/projects/locards/thumbnails/main.png)
+Project content

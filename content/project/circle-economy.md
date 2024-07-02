@@ -15,7 +15,7 @@ tags: ['Product design', 'UX/UI', 'Figma', 'Motion']
 thumbnails:
   [
     {
-      src: '/images/projects/locards/thumbnails/main.png',
+      src: '/images/projects/circle-economy/thumbnails/main.png',
       positions:
         {
           common: { top: '35.37%', left: '4.1%' },
@@ -26,13 +26,4 @@ thumbnails:
   ]
 ---
 
-::hero{name="Locards project"}
-Test
-
-#test
-Hello from test slot
-::
-
-how are you?
-
-![left image](/images/projects/locards/thumbnails/main.png)
+Project content

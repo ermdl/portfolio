@@ -1,8 +1,8 @@
 <template>
   <Container>
-    <!-- <div
+    <div
       class="flex flex-col gap-6 w-full rounded-3xl group/project transform-gpu overflow-hidden duration-200 delay-75"
-      :style="setProjectBackgroundColor"
+      :style="setBgColor(data.colors?.background || 'white')"
     >
       <AspectRatio :ratio="16 / 9">
         <div class="flex flex-col gap-6 relative w-full h-full">
@@ -11,16 +11,16 @@
               <div
                 class="project-title font-semibold text-4xl tracking-tight text-white"
               >
-                {{ project.title }}
+                {{ data.title }}
               </div>
               <div class="mt-2 text-sm text-white/80">
-                {{ project.description }}
+                {{ data.description }}
               </div>
               <div
                 class="flex gap-1.5 mt-4 flex-wrap transform-gpu transition-all duration-200 delay-75 translate-y-0 opacity-100 group-hover/project:translate-y-0 group-hover/project:opacity-100"
               >
                 <div
-                  v-for="tag in project.tags"
+                  v-for="tag in data.tags"
                   :key="tag"
                   class="px-3 py-1 rounded-full text-sm text-white bg-black/15 backdrop-blur-lg"
                 >
@@ -32,12 +32,12 @@
           <div class="absolute w-full h-full -z-10">
             <div
               class="absolute w-[250%] h-[400%] left-[-165%] top-[-250%] -rotate-45 rounded-full blur-[800px]"
-              :style="setProjectCornerColor"
+              :style="setBgColor(data.colors?.corner || 'black')"
             ></div>
             <img
-              v-for="(thumbnail, index) in project.thumbnails"
+              v-for="(thumbnail, index) in data.thumbnails"
               :src="thumbnail.src"
-              :alt="project.title"
+              :alt="data.title"
               :style="{
                 ...thumbnail.positions.template,
                 ...thumbnail.sizes.template,
@@ -47,7 +47,9 @@
           </div>
         </div>
       </AspectRatio>
-    </div> -->
+    </div>
+
+    <pre>{{ data }}</pre>
 
     <ContentDoc />
   </Container>
@@ -62,6 +64,13 @@
 
 <script lang="ts" setup>
 const route = useRoute()
+const slug = route.params.slug as string
+
+const { data } = await useAsyncData('project', () =>
+  queryContent('project')
+    .where({ slug: { $eq: slug } })
+    .findOne()
+)
 
 // const projectsStore = useProjectsStore()
 // const project = projectsStore.list.find(
@@ -70,13 +79,17 @@ const route = useRoute()
 
 // const projectSlug = computed(() => route.params.slug)
 
-// const setProjectBackgroundColor = computed(() => {
-//   return `background-color: ${project.colors?.background || 'white'}`
-// })
+const setProjectBackgroundColor = computed(() => {
+  return `background-color: ${data.colors?.background || 'white'}`
+})
 
-// const setProjectCornerColor = computed(() => {
-//   return `background-color: ${project.colors?.corner || 'black'}`
-// })
+const setProjectCornerColor = computed(() => {
+  return `background-color: ${data.colors?.corner || 'black'}`
+})
+
+const setBgColor = (color: string) => {
+  return `background-color: ${color}`
+}
 </script>
 
 <style>
