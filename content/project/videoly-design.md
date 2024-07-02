@@ -52,5 +52,5 @@ direction: right
 Some interesting content should be here for the tests
 
 #image
-![Preview](/images/projects/videoly/content/test.png)
+![Preview](/images/projects/videoly/content/mockuuups-a-simple-iphone-mockup-in-a-users-hand.jpeg)
 ::
