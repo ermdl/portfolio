@@ -46,7 +46,7 @@
           <NuxtLink to="/contact">Contact</NuxtLink>
 
           <div
-            class="flex gap-3 p-1 pr-4 bg-background/75 backdrop-blur-lg border border-slate-200 dark:border-slate-800 rounded-full items-center"
+            class="flex gap-3 p-1 pr-4 bg-background/50 rounded-full items-center border border-slate-200 dark:border-slate-800"
           >
             <div
               class="flex items-center gap-2 px-3 py-2 rounded-full bg-green-50 dark:bg-green-950 border border-slate-200 dark:border-slate-800"
@@ -73,68 +73,30 @@
             </NuxtLink>
           </div>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Button variant="outline" size="icon" class="rounded-full">
-                <Icon :name="useIcon(iconOfColorMode ?? '')" class="w-5 h-5" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent
-              align="end"
-              side="bottom"
-              class="flex flex-col gap-1 rounded-xl"
-            >
-              <DropdownMenuLabel>Color theme</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem
-                class="flex gap-2 rounded-lg"
-                :class="{
-                  'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-950':
-                    getColorMode === 'light',
-                }"
-                @click="setColorTheme('light')"
-              >
-                <Icon :name="useIcon(icons.light)" class="w-5 h-5" />
-                Light
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                class="flex gap-2 rounded-lg"
-                :class="{
-                  'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-950':
-                    getColorMode === 'dark',
-                }"
-                @click="setColorTheme('dark')"
-              >
-                <Icon :name="useIcon(icons.dark)" class="w-5 h-5" />
-                Dark
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                class="flex gap-2 rounded-lg"
-                :class="{
-                  'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-950':
-                    getColorMode === 'system',
-                }"
-                @click="setColorTheme('system')"
-              >
-                <Icon :name="useIcon(icons.system)" class="w-5 h-5" />
-                System
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <!-- <Button
-            variant="outline"
-            size="icon"
-            @click="
-              setColorTheme($colorMode.preference === 'dark' ? 'light' : 'dark')
-            "
-          >
-            <Icon
-              :name="useIcon('moon')"
-              v-if="getColorMode === 'light'"
-              class="w-5 h-5"
-            />
-            <Icon :name="useIcon('sun')" v-else class="w-5 h-5" />
-          </Button> -->
+          <div>
+            <!-- <pre>{{ $colorMode.value }}</pre>
+            <pre>{{ iconOfColorMode }}</pre> -->
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    class="rounded-full"
+                    @click="toggleColorMode()"
+                  >
+                    <Icon
+                      :name="useIcon(iconOfColorMode ?? '')"
+                      class="w-5 h-5"
+                    />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent side="bottom" align="end">
+                  <p>{{ tooltipMessage }}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
         </div>
       </div>
     </div>
@@ -145,14 +107,6 @@
 // Color mode
 type Theme = 'light' | 'dark' | 'system'
 const colorMode = useColorMode()
-
-const setColorTheme = (newTheme: Theme) => {
-  colorMode.preference = newTheme
-}
-
-const getColorMode = computed(() => {
-  return colorMode.preference
-})
 
 const icons = {
   light: 'sun',
@@ -170,13 +124,36 @@ const iconOfColorMode = computed(() => {
       return icons.system
   }
 })
-onBeforeMount(() => {
-  console.log(colorMode.preference)
+
+const toggleColorMode = () => {
+  switch (colorMode.preference) {
+    case 'light':
+      colorMode.preference = 'dark'
+      break
+    case 'dark':
+      colorMode.preference = 'light'
+      break
+    case 'system':
+      colorMode.preference = 'light'
+      break
+  }
+}
+
+const tooltipMessage = computed(() => {
+  switch (colorMode.preference) {
+    case 'light':
+      return 'Switch to dark mode'
+    case 'dark':
+      return 'Switch to light mode'
+    case 'system':
+      return 'Switch to system mode'
+  }
 })
 
+// Changing bacground color on scroll
 const backgroundColor = ref('bg-trabsparent')
 
-const handleScroll = () => {
+const handleBackground = () => {
   if (window.scrollY > 0) {
     backgroundColor.value = 'backdrop-blur-lg bg-background/75'
   } else {
@@ -185,10 +162,11 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
+  handleBackground()
+  window.addEventListener('scroll', handleBackground)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('scroll', handleBackground)
 })
 </script>

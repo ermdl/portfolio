@@ -34,7 +34,7 @@
           <Button
             variant="link"
             size="icon"
-            class="bg-white rounded-full scale-0 transform-gpu transition-transform duration-200 group-hover/project:scale-100"
+            class="bg-white text-black rounded-full scale-0 transform-gpu transition-transform duration-200 group-hover/project:scale-100"
           >
             <Icon :name="useIcon('arrow-up-right')" class="w-4 h-4" />
           </Button>

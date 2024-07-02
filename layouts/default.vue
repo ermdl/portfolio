@@ -2,9 +2,10 @@
   <div class="container mx-auto max-w-7xl">
     <Header></Header>
   </div>
-  <!-- <div class="dashed-lines vertical"></div> -->
-  <div class="container-dashed-lines mx-auto max-w-7xl">
-    <main class="py-20">
+  <div
+    class="container-dashed-lines-light mx-auto max-w-7xl text-slate-200 dark:text-slate-800"
+  >
+    <main class="py-20 text-primary">
       <slot></slot>
     </main>
   </div>
@@ -12,14 +13,14 @@
 </template>
 
 <style scoped>
-.container-dashed-lines {
+.container-dashed-lines-light {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-.container-dashed-lines::before,
-.container-dashed-lines::after {
+.container-dashed-lines-light::before,
+.container-dashed-lines-light::after {
   content: '';
   position: absolute;
   top: 0;
@@ -27,18 +28,48 @@
   width: 1px;
   background: repeating-linear-gradient(
     0deg,
-    #e2e8f0,
-    #e2e8f0 4px,
+    currentColor,
+    currentColor 4px,
     transparent 4px,
     transparent 12px
   );
 }
 
-.container-dashed-lines::before {
+.container-dashed-lines-light::before {
   left: calc(2rem - 20px);
 }
 
-.container-dashed-lines::after {
+.container-dashed-lines-light::after {
+  right: calc(2rem - 20px);
+}
+
+.container-dashed-lines-dark {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.container-dashed-lines-dark::before,
+.container-dashed-lines-dark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(
+    0deg,
+    red,
+    red 4px,
+    transparent 4px,
+    transparent 12px
+  );
+}
+
+.container-dashed-lines-dark::before {
+  left: calc(2rem - 20px);
+}
+
+.container-dashed-lines-dark::after {
   right: calc(2rem - 20px);
 }
 </style>

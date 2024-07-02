@@ -5,18 +5,18 @@
     :slides-per-view="1"
     :loop="true"
     :effect="'creative'"
+    :speed="550"
     :autoplay="{
       delay: 8000,
-      disableOnInteraction: true,
     }"
     :creative-effect="{
       prev: {
         shadow: false,
-        translate: ['-50%', 0, -1],
+        translate: ['-100%', 0, -500],
       },
       next: {
         shadow: false,
-        translate: ['100%', 0, 0],
+        translate: ['100%', 0, -500],
       },
     }"
     :navigation="{
@@ -28,20 +28,22 @@
       <ProjectItem :project="project"></ProjectItem>
     </SwiperSlide>
 
+    <div class="swiper-pagination"></div>
+
     <div
       class="inline-flex gap-2 absolute right-4 bottom-4 z-10 p-2 rounded-full bg-black/20 backdrop-blur-xl"
     >
       <Button
         variant="link"
         size="icon"
-        class="swiper-control-prev bg-white rounded-full transform-gpu transition-transform duration-200 hover:scale-110 active:scale-90"
+        class="swiper-control-prev bg-white text-black rounded-full transform-gpu transition-transform duration-200 hover:scale-110 active:scale-90"
       >
         <Icon :name="useIcon('arrow-left')" class="w-4 h-4" />
       </Button>
       <Button
         variant="link"
         size="icon"
-        class="swiper-control-next bg-white rounded-full transform-gpu transition-transform duration-200 hover:scale-110 active:scale-90"
+        class="swiper-control-next bg-white text-black rounded-full transform-gpu transition-transform duration-200 hover:scale-110 active:scale-90"
       >
         <Icon :name="useIcon('arrow-right')" class="w-4 h-4" />
       </Button>

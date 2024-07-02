@@ -19,7 +19,16 @@
           <Icon :name="useIcon('wand-sparkles')" class="w-5 h-5" />
           Let's work together!</Button> -->
           <NuxtLink to="/projects">
-            <Button variant="outline" class="flex"> Check out projects</Button>
+            <Button
+              variant="outline"
+              class="flex gap-0 transition-all group/button-projects hover:gap-2 duration-200"
+            >
+              Check out projects
+              <Icon
+                :name="useIcon('arrow-right')"
+                class="w-0 h-4 translate-x-1 transition-all opacity-0 group-hover/button-projects:translate-x-0 group-hover/button-projects:opacity-100 group-hover/button-projects:w-4 duration-200"
+              />
+            </Button>
           </NuxtLink>
         </div>
       </div>
