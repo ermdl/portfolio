@@ -1,7 +1,11 @@
 <template>
   <section class="grid grid-cols-2">
-    <ContentSlot :use="$slots.text" class="col-span-1"></ContentSlot>
-    <ContentSlot :use="$slots.image" class="col-span-1"></ContentSlot>
+    <div class="col-span-1">
+      <ContentSlot :use="$slots.text"></ContentSlot>
+    </div>
+    <div class="col-span-1">
+      <ContentSlot :use="$slots.image"></ContentSlot>
+    </div>
   </section>
 </template>
 
