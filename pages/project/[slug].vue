@@ -4,7 +4,7 @@
       class="flex flex-col gap-6 w-full rounded-3xl group/project transform-gpu overflow-hidden duration-200 delay-75 mb-10"
       :style="setBgColor(data?.colors?.background || 'white')"
     >
-      <AspectRatio :ratio="16 / 9">
+      <AspectRatio :ratio="16 / 10">
         <div class="flex flex-col gap-6 relative w-full h-full">
           <div class="flex flex-col gap-2 grow justify-between p-10 w-[75%]">
             <div>
