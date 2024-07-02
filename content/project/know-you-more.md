@@ -1,19 +1,21 @@
 ---
-id: 3
-title: Videoly
-slug: videoly-dev
-description: Webflow development with Vue components
+id: 6
+title: Know You More
+slug: know-you-more
+description: Webflow website development
+
 category: 1
 isFeatured: false
-link: 'https://videoly.co/'
+link: https://know-you-more.com/
 colors:
-  background: '#FFD262'
-  corner: '#7A7FE8'
-tags: ['Webflow', 'JavaScript', 'Vue']
+  background: '#F8F6F5'
+  corner: '#67C6A1'
+
+tags: ['Webflow']
 thumbnails:
   [
     {
-      src: '/images/projects/videoly-dev/thumbnails/main.png',
+      src: '/images/projects/know-you-more/thumbnails/main.png',
       positions:
         {
           common: { top: '35%', left: '8.5%' },

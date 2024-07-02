@@ -1,43 +1,43 @@
 {
-	"folders": [
-	  {
-		"path": ".",
-	  },
-	],
-	"settings": {
-	  "editor.defaultFormatter": "esbenp.prettier-vscode",
-	  "editor.formatOnSave": true,
-	  "editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit",
-	  },
-	  "[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-	  },
-	  "[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-	  },
-	  "[prisma]": {
-		"editor.defaultFormatter": "Prisma.prisma",
-	  },
-	  "eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"vue",
-		"typescript",
-		"typescriptreact",
-	  ],
-	  "prettier.tabWidth": 2,
-	  "prettier.semi": false,
-	  "prettier.singleQuote": true,
-	  "prettier.useTabs": false,
-	  "prettier.printWidth": 80,
-	  "prettier.bracketSpacing": true,
-	  "prettier.arrowParens": "avoid",
-	  "vetur.format.defaultFormatter.html": "prettier", // For compatibility with Vetur, which might still be required for certain features
-	  "vue-format.defaultFormatter.html": "prettier",
-	  // Enable ESlint flat config support
-	  "eslint.experimental.useFlatConfig": true,
-	  "css.customData": [".vscode/tailwind.json"],
-	},
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[prisma]": {
+      "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "vue",
+      "typescript",
+      "typescriptreact"
+    ],
+    "prettier.tabWidth": 2,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.useTabs": false,
+    "prettier.printWidth": 80,
+    "prettier.bracketSpacing": true,
+    "prettier.arrowParens": "avoid",
+    "vetur.format.defaultFormatter.html": "prettier", // For compatibility with Vetur, which might still be required for certain features
+    "vue-format.defaultFormatter.html": "prettier",
+    // Enable ESlint flat config support
+    "eslint.experimental.useFlatConfig": true,
+    "css.customData": [".vscode/tailwind.json"],
+    "css.lint.unknownAtRules": "ignore"
   }
-  
+}

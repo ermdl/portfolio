@@ -2,7 +2,6 @@
   <div class="flex flex-col gap-40">
     <SectionHomeHero />
     <SectionHomeServices />
-    <SectionHomeProjects />
     <!-- <SectionHomeStacks /> -->
     <SectionHomeExperiences />
     <SectionHomeRecommendations />

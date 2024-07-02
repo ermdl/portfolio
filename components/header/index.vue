@@ -1,12 +1,13 @@
 <template>
   <header
-    class="fixed w-full top-0 left-0 z-10 backdrop-blur-lg bg-background/75"
+    class="fixed w-full top-0 left-0 z-10 transform-gpu transition-all"
+    :class="backgroundColor"
   >
     <div class="container mx-auto max-w-7xl px-8 py-4 rounded-none">
       <div class="flex justify-between items-center">
         <!-- Left -->
         <div>
-          <NuxtLink to="/" class="font-medium text-black">
+          <NuxtLink to="/" class="font-medium text-primary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"
@@ -45,10 +46,10 @@
           <NuxtLink to="/contact">Contact</NuxtLink>
 
           <div
-            class="flex gap-3 p-1 pr-4 bg-white/75 backdrop-blur-lg border border-slate-200 rounded-full items-center"
+            class="flex gap-3 p-1 pr-4 bg-background/75 backdrop-blur-lg border border-slate-200 dark:border-slate-800 rounded-full items-center"
           >
             <div
-              class="flex items-center gap-2 px-3 py-2 rounded-full bg-green-50 dark:bg-green-950 border border-slate-200"
+              class="flex items-center gap-2 px-3 py-2 rounded-full bg-green-50 dark:bg-green-950 border border-slate-200 dark:border-slate-800"
             >
               <span class="relative flex h-2.5 w-2.5">
                 <span
@@ -74,7 +75,7 @@
 
           <DropdownMenu>
             <DropdownMenuTrigger>
-              <Button variant="outline" size="icon">
+              <Button variant="outline" size="icon" class="rounded-full">
                 <Icon :name="useIcon(iconOfColorMode ?? '')" class="w-5 h-5" />
               </Button>
             </DropdownMenuTrigger>
@@ -171,5 +172,23 @@ const iconOfColorMode = computed(() => {
 })
 onBeforeMount(() => {
   console.log(colorMode.preference)
+})
+
+const backgroundColor = ref('bg-trabsparent')
+
+const handleScroll = () => {
+  if (window.scrollY > 0) {
+    backgroundColor.value = 'backdrop-blur-lg bg-background/75'
+  } else {
+    backgroundColor.value = 'bg-transparent'
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>

@@ -18,7 +18,7 @@ const delegatedProps = computed(() => {
     :class="
       cn(
         // 'inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground',
-        'inline-flex gap-1 items-center justify-center rounded-full bg-white border border-slate-200 p-2 text-muted-foreground',
+        'inline-flex gap-1 items-center justify-center rounded-full bg-background border border-slate-200 dark:border-slate-800 p-2 text-muted-foreground',
         props.class
       )
     "
