@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-swiper',
     "@nuxt/content",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxthq/studio"
   ],
   colorMode: {
     classSuffix: '',
