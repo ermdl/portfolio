@@ -42,4 +42,14 @@ thumbnails:
         width: 50%
 ---
 
-Project content
+::half-image
+---
+direction: right
+---
+#text
+## **Some title here**
+
+Some interesting content should be here for the tests
+
+#image
+::
