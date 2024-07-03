@@ -43,12 +43,19 @@ thumbnails:
 ---
 
 ::half
-
-## direction: right
-
 #text
-
 ## **Some title here**
 
 Some interesting content should be here for the tests
+
+![Testing](images/projects/videoly/content/test.jpg)
+
+  :::prose-img
+  ---
+  alt: Test
+  height: 100%
+  src: /images/projects/videoly/content/test.jpg
+  width: 100%
+  ---
+  :::
 ::
