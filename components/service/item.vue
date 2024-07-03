@@ -5,20 +5,20 @@
       class="border border-slate-900/5 dark:border-slate-100/5 rounded-xl overflow-hidden h-auto bg-white dark:bg-black"
     >
       <AspectRatio :ratio="4 / 3">
-        <img
+        <NuxtImg
           v-if="$colorMode.value === 'light'"
           :src="service.thumbnail.light"
           :alt="service.title"
           class="w-full h-full select-none pointer-events-none"
         />
-        <img
+        <NuxtImg
           v-else-if="$colorMode.value === 'dark'"
           :src="service.thumbnail.dark"
           :alt="service.title"
           class="w-full h-full select-none pointer-events-none"
         />
         <!-- <Skeleton class="w-full h-full" v-if="!isThumbnailLoaded"></Skeleton>
-          <img
+          <NuxtImg
             v-else
             :src="service.thumbnail"
             :alt="service.title"
@@ -26,7 +26,7 @@
           /> -->
       </AspectRatio>
       <!-- <Skeleton class="w-full h-[360px]" v-if="!isThumbnailLoaded"></Skeleton>
-      <img
+      <NuxtImg
         v-else
         :src="project.thumbnail"
         :alt="project.title"

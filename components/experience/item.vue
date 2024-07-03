@@ -8,7 +8,7 @@
           class="w-full h-full rounded-md"
           v-if="!isLogotypeLoaded"
         ></Skeleton>
-        <img
+        <NuxtImg
           v-else-if="experience.logotype"
           :src="experience.logotype"
           :alt="experience.company"

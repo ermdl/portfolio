@@ -44,7 +44,7 @@
             class="absolute w-[250%] h-[400%] left-[-165%] top-[-250%] -rotate-45 rounded-full blur-[800px]"
             :style="setProjectCornerColor"
           ></div>
-          <img
+          <NuxtImg
             v-for="(thumbnail, index) in project.thumbnails"
             :src="thumbnail.src"
             :alt="project.title"

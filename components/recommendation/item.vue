@@ -8,7 +8,7 @@
           class="w-full h-full rounded-full"
           v-if="!isAvatarLoaded"
         ></Skeleton>
-        <img
+        <NuxtImg
           v-else
           :src="recommendation.avatar"
           alt=""
