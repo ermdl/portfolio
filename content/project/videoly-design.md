@@ -48,14 +48,6 @@ thumbnails:
 
 Some interesting content should be here for the tests
 
+#image
 ![Testing](images/projects/videoly/content/test.jpg)
-
-  :::prose-img
-  ---
-  alt: Test
-  height: 100%
-  src: /images/projects/videoly/content/test.jpg
-  width: 100%
-  ---
-  :::
 ::
