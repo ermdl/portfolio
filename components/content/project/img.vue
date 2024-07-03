@@ -1,10 +1,7 @@
 <template>
-  <NuxtImg
-    :src="src"
-    :alt="alt"
-    placeholder
-    class="rounded-3xl select-none pointer-events-none"
-  />
+  <div class="rounded-3xl select-none pointer-events-none overflow-hidden">
+    <NuxtImg :src="src" :alt="alt" placeholder />
+  </div>
 </template>
 
 <script setup lang="ts">

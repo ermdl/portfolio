@@ -9,9 +9,9 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxtjs/color-mode',
     'nuxt-swiper',
-    "@nuxt/content",
-    "@nuxt/image",
-    "@nuxthq/studio"
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxthq/studio',
   ],
   colorMode: {
     classSuffix: '',
