@@ -83,6 +83,7 @@
                     variant="outline"
                     size="icon"
                     class="rounded-full"
+                    title="Toggle color mode"
                     @click="toggleColorMode()"
                   >
                     <Icon

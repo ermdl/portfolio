@@ -22,6 +22,7 @@
             <Button
               variant="outline"
               class="flex gap-0 transition-all group/button-projects hover:gap-2 duration-200"
+              title="Check out projects"
             >
               Check out projects
               <Icon

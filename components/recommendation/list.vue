@@ -21,7 +21,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Button variant="default" class="group flex">
+      <Button variant="default" class="group flex" title="View recommendations">
         View all recommendations
         <div class="relative w-5 h-5">
           <Icon

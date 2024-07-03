@@ -37,6 +37,7 @@
         variant="link"
         size="icon"
         class="swiper-control-prev bg-white text-black rounded-full transform-gpu transition-transform duration-200 hover:scale-110 active:scale-90"
+        title="Previous project"
       >
         <Icon :name="useIcon('arrow-left')" class="w-4 h-4" />
       </Button>
@@ -44,6 +45,7 @@
         variant="link"
         size="icon"
         class="swiper-control-next bg-white text-black rounded-full transform-gpu transition-transform duration-200 hover:scale-110 active:scale-90"
+        title="Next project"
       >
         <Icon :name="useIcon('arrow-right')" class="w-4 h-4" />
       </Button>
