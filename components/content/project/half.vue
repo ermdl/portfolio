@@ -3,9 +3,7 @@
     <div class="col-span-1 flex flex-col items-start justify-end">
       <ContentSlot :use="$slots.text"></ContentSlot>
     </div>
-    <div
-      class="col-span-1 flex flex-col items-start justify-end rounded-3xl overflow-hidden"
-    >
+    <div class="col-span-1 flex flex-col items-start justify-end">
       <ContentSlot :use="$slots.image"></ContentSlot>
     </div>
   </section>
