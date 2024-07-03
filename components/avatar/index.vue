@@ -11,6 +11,7 @@
       :src="avatarUrl"
       alt="Danila Ermolenko"
       class="w-full h-full rounded-full select-none pointer-events-none"
+      loading="lazy"
     />
   </div>
 </template>

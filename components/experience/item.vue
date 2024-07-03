@@ -13,6 +13,7 @@
           :src="experience.logotype"
           :alt="experience.company"
           class="select-none pointer-events-none"
+          loading="lazy"
         />
         <Icon v-else :name="useIcon('image-off')" class="text-2xl text-muted" />
       </div>

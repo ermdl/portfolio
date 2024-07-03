@@ -13,13 +13,13 @@
           :src="recommendation.avatar"
           alt=""
           class="w-full h-full rounded-full select-none pointer-events-none"
+          loading="lazy"
         />
       </div>
       <div>
-        <TypoH5
-          >{{ recommendation.name.first }}
-          {{ recommendation.name.last }}</TypoH5
-        >
+        <div class="font-semibold text-normal">
+          {{ recommendation.name.first }} {{ recommendation.name.last }}
+        </div>
         <p class="text-sm text-muted-foreground">
           {{ recommendation.position }}
         </p>
