@@ -81,4 +81,11 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  h1 {
+    @apply text-4xl font-normal;
+  }
+  h2 {
+    @apply text-3xl font-normal;
+  }
 }

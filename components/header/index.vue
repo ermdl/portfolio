@@ -7,7 +7,11 @@
       <div class="flex justify-between items-center">
         <!-- Left -->
         <div>
-          <NuxtLink to="/" class="font-medium text-primary">
+          <NuxtLink
+            to="/"
+            class="font-medium text-primary"
+            aria-label="Go to dlencode.com"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"
@@ -45,59 +49,8 @@
           <NuxtLink to="/projects">Projects</NuxtLink>
           <NuxtLink to="/contact">Contact</NuxtLink>
 
-          <div
-            class="flex gap-3 p-1 pr-4 bg-background/50 rounded-full items-center border border-slate-200 dark:border-slate-800"
-          >
-            <div
-              class="flex items-center gap-2 px-3 py-2 rounded-full bg-green-50 dark:bg-green-950 border border-slate-200 dark:border-slate-800"
-            >
-              <span class="relative flex h-2.5 w-2.5">
-                <span
-                  class="animate-ping absolute inline-flex h-2.5 w-2.5 rounded-full bg-green-300 opacity-75 dark:bg-green-700"
-                ></span>
-                <span
-                  class="relative inline-flex rounded-full left-0.5 top-0.5 h-1.5 w-1.5 bg-green-500"
-                ></span>
-              </span>
-              <div
-                class="text-green-900 select-none dark:text-green-100 leading-[14px]"
-              >
-                Open to work
-              </div>
-            </div>
-            <NuxtLink to="/contact">
-              <div class="flex items-center gap-2">
-                Let's connect
-                <Icon :name="useIcon('arrow-right')" class="w-4 h-4" />
-              </div>
-            </NuxtLink>
-          </div>
-
-          <div>
-            <!-- <pre>{{ $colorMode.value }}</pre>
-            <pre>{{ iconOfColorMode }}</pre> -->
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    class="rounded-full"
-                    title="Toggle color mode"
-                    @click="toggleColorMode()"
-                  >
-                    <Icon
-                      :name="useIcon(iconOfColorMode ?? '')"
-                      class="w-5 h-5"
-                    />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent side="bottom" align="end">
-                  <p>{{ tooltipMessage }}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          </div>
+          <HeaderBlockOpen />
+          <ColorModeTrigger />
         </div>
       </div>
     </div>
@@ -105,52 +58,6 @@
 </template>
 
 <script lang="ts" setup>
-// Color mode
-type Theme = 'light' | 'dark' | 'system'
-const colorMode = useColorMode()
-
-const icons = {
-  light: 'sun',
-  dark: 'moon',
-  system: 'sun-moon',
-}
-
-const iconOfColorMode = computed(() => {
-  switch (colorMode.preference) {
-    case 'light':
-      return icons.light
-    case 'dark':
-      return icons.dark
-    case 'system':
-      return icons.system
-  }
-})
-
-const toggleColorMode = () => {
-  switch (colorMode.preference) {
-    case 'light':
-      colorMode.preference = 'dark'
-      break
-    case 'dark':
-      colorMode.preference = 'light'
-      break
-    case 'system':
-      colorMode.preference = 'light'
-      break
-  }
-}
-
-const tooltipMessage = computed(() => {
-  switch (colorMode.preference) {
-    case 'light':
-      return 'Switch to dark mode'
-    case 'dark':
-      return 'Switch to light mode'
-    case 'system':
-      return 'Switch to system mode'
-  }
-})
-
 // Changing bacground color on scroll
 const backgroundColor = ref('bg-trabsparent')
 

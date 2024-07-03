@@ -48,7 +48,7 @@ export const useExperienceStore = defineStore('experiences', () => {
       description: 'Design team',
     },
     {
-      logotype: 'images/logotypes/experiences/seon.svg',
+      logotype: '/images/logotypes/experiences/seon.svg',
       position: 'Web Designer, Frontend Developer',
       company: 'Seon.agency',
       location: 'Stavropol, Russia',

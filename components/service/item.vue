@@ -6,11 +6,6 @@
     >
       <AspectRatio :ratio="4 / 3">
         <NuxtImg
-          :src="service.thumbnail.light"
-          :alt="service.title"
-          class="w-full h-full select-none pointer-events-none"
-        />
-        <!-- <NuxtImg
           v-if="$colorMode.value === 'light'"
           :src="service.thumbnail.light"
           :alt="service.title"
@@ -21,7 +16,7 @@
           :src="service.thumbnail.dark"
           :alt="service.title"
           class="w-full h-full select-none pointer-events-none"
-        /> -->
+        />
         <!-- <Skeleton class="w-full h-full" v-if="!isThumbnailLoaded"></Skeleton>
           <NuxtImg
             v-else

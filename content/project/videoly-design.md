@@ -42,15 +42,13 @@ thumbnails:
         width: 50%
 ---
 
-::half-image
----
-direction: right
----
+::half
+
+## direction: right
+
 #text
+
 ## **Some title here**
 
 Some interesting content should be here for the tests
-
-#image
-![Preview](/images/projects/videoly/content/mockuuups-a-simple-iphone-mockup-in-a-users-hand.jpeg)
 ::
