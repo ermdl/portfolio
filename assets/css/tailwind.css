@@ -83,9 +83,17 @@
   }
 
   h1 {
-    @apply text-4xl font-normal;
+    @apply text-4xl font-normal mb-4;
   }
   h2 {
-    @apply text-3xl font-normal;
+    @apply text-3xl font-normal mb-2;
+  }
+
+  h4 {
+    @apply text-xl font-normal mb-2;
+  }
+
+  p {
+    @apply text-base;
   }
 }

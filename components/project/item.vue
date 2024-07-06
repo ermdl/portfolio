@@ -53,7 +53,7 @@
               ...thumbnail.positions.common,
               ...thumbnail.sizes.common,
             }"
-            class="absolute object-cover origin-center max-w-none transform-gpu group-hover/project:translate-y-[12%] group-hover/project:scale-110 transition-transform duration-300"
+            class="absolute object-contain origin-center max-w-none transform-gpu group-hover/project:translate-y-[12%] group-hover/project:scale-110 transition-transform duration-300"
             loading="lazy"
           />
         </div>

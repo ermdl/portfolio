@@ -42,7 +42,7 @@
                 ...thumbnail.positions.template,
                 ...thumbnail.sizes.template,
               }"
-              class="absolute object-cover origin-center max-w-none"
+              class="absolute object-contain origin-center max-w-none"
             />
           </div>
         </div>
@@ -74,5 +74,9 @@ main :deep(h1) {
 }
 h1 {
   @apply text-6xl font-semibold;
+}
+
+img {
+  @apply w-full h-full rounded-3xl select-none pointer-events-none;
 }
 </style>

@@ -44,10 +44,21 @@ thumbnails:
 
 ::half
 #text
+
 ## **Some title here**
 
 Some interesting content should be here for the tests
 
 #image
+
+#### Another test?
+
 ![Testing](images/projects/videoly/content/test.jpg)
+::
+
+::slider
+#slides
+::slide
+![Testing](images/projects/videoly/content/test.jpg)
+::
 ::
