@@ -61,8 +61,15 @@ Default slot
 ## Slides slot
 
   :::slide
+  ![Videoly-Brands-Stats-Videos-Full.png](/images/projects/videoly/content/Videoly-Brands-Stats-Videos-Full.png)
   :::
 
   :::slide
+  ![Videoly-Brands-Stats-Products-Full.png](/images/projects/videoly/content/Videoly-Brands-Stats-Products-Full.png)
+  :::
+
+  :::slide
+  #slide
+  ![Videoly-Brands-Stats-Retailers-Full.png](/images/projects/videoly/content/Videoly-Brands-Stats-Retailers-Full.png)
   :::
 ::
