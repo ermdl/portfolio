@@ -1,23 +1,13 @@
 <template>
   <Swiper
     class="w-full rounded-3xl relative"
-    :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]"
+    :modules="[SwiperAutoplay, SwiperNavigation]"
     :slides-per-view="1"
     :loop="true"
     :effect="'creative'"
     :speed="550"
     :autoplay="{
       delay: 8000,
-    }"
-    :creative-effect="{
-      prev: {
-        shadow: false,
-        translate: ['-100%', 0, -500],
-      },
-      next: {
-        shadow: false,
-        translate: ['100%', 0, -500],
-      },
     }"
     :navigation="{
       nextEl: '.swiper-control-next',
