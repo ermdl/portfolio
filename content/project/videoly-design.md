@@ -55,6 +55,8 @@ Some interesting content should be here for the tests
 ::
 
 ::slider
+sadasd
+
 #slides
 ## Statistics
 
