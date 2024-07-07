@@ -44,13 +44,11 @@ thumbnails:
 
 ::half
 #text
-
 ## **Some title here**
 
 Some interesting content should be here for the tests
 
 #image
-
 #### Another test?
 
 ![Testing](images/projects/videoly/content/test.jpg)
@@ -58,7 +56,20 @@ Some interesting content should be here for the tests
 
 ::slider
 #slides
-::slide
-![Testing](images/projects/videoly/content/test.jpg)
-::
+## Statistics
+
+  :::slide
+  #slide
+  ![Videoly — Brands — Stats Videos — Full.png](/images/projects/videoly/content/Videoly%20%E2%80%94%20Brands%20%E2%80%94%20Stats%20Videos%20%E2%80%94%20Full.png)
+  :::
+
+  :::slide
+  #slide
+  ![Videoly — Brands — Stats Products — Full.png](/images/projects/videoly/content/Videoly%20%E2%80%94%20Brands%20%E2%80%94%20Stats%20Products%20%E2%80%94%20Full.png)
+  :::
+
+  :::slide
+  #slide
+  ![Videoly — Brands — Stats Retailers — Full.png](/images/projects/videoly/content/Videoly%20%E2%80%94%20Brands%20%E2%80%94%20Stats%20Retailers%20%E2%80%94%20Full.png)
+  :::
 ::
