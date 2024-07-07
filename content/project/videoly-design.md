@@ -55,10 +55,10 @@ Some interesting content should be here for the tests
 ::
 
 ::slider
-sadasd
+Default slot
 
 #slides
-## Statistics
+## Slides slot
 
   :::slide
   #slide
